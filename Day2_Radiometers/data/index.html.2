@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="DC.language" content="EN-US" >
+    <meta name="DC.creator" content="US Department of Commerce, NOAA, Global Monitoring Laboratory" >
+
+    
+    <meta name="DC.date.created"  content="2005-10-01" >
+    <meta name="DC.date.reviewed" content="2024-07-09" >
+
+
+    <meta name="keywords" content="noaa, national oceanic and atmospheric administration, earth system research, esrl, gml, gmd, climate, air quality, numerical modeling, global warming, climate change, ozone, co2, aerosols">
+
+
+    <meta name="description" content="The Global Monitoring Laboratory conducts research on greenhouse gas and carbon cycle feedbacks, changes in clouds, aerosols, and surface radiation, and recovery of stratospheric ozone. ">
+    <meta name="DC.description" content="The Global Monitoring Laboratory conducts research on greenhouse gas and carbon cycle feedbacks, changes in clouds, aerosols, and surface radiation, and recovery of stratospheric ozone. ">
+
+
+
+
+    <title>NOAA Global Monitoring Laboratory</title>
+    <meta name="DC.title" content="NOAA Global Monitoring Laboratory" >
+
+
+
+    <!-- Bootstrap -->
+<!--
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+-->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- more css -->
+    <link href="/css/gmd.css" rel="stylesheet" media="all">
+    <link href="/css/header.css" rel="stylesheet" media="all">
+    <link href="/css/footer.css" rel="stylesheet" media="all">
+    <link href="/css/colors.css" rel="stylesheet" media="all">
+    <!--    <link href="/css/buttons.css" rel="stylesheet" media="all"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<!--<link href="/css/collapse.css" rel="stylesheet" media="all"> -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!--
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+-->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+
+    
+<div id="major_header">
+
+    <div id="search" class="d-none d-md-block float-right">
+        <form action="https://search.usa.gov/search">
+	    <div class="form-group mb-1">
+		<input type="hidden" name="affiliate" value="noaa_esrl_gmd">
+		<input type="hidden" name="v:project" value="firstgov" >
+		<div class="input-group mb-1">
+		    <input type="text" name="query" id="query-field" autocomplete="off" class='form-control input-xs' placeholder="Search GML...">
+		    <div class="input-group-append">
+			<button type="submit" id='searchbutton' class="btn btn-secondary btn-sm"><i class="fa fa-search"></i><span class='sr-only'>Search</span></button>
+		    </div>
+		    <label for="query-field" class="sr-only"> Search GML:</label>
+		</div>
+	    </div>
+        </form>
+    </div>
+
+    <a href="https://www.noaa.gov" title="NOAA">
+        <img src="/webdata/logos/noaa_small.png" class="header_logo" alt='noaa logo'>
+    </a>
+
+    <div id='navbar-brand-title'>
+	<a href="/" title="GML" class="lab">Global Monitoring Laboratory</a><br>
+	<a href="https://www.esrl.noaa.gov/" title="ESRL Home Page" class="division" >Earth System Research Laboratories</a>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+    
+<nav class="navbar navbar-gmd navbar-expand-lg navbar-dark sticky-topxxx">
+  <a class="navbar-brand d-lg-none" href="#">Menu</a> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+<div class="container">
+
+  <div id="navbarNavDropdown" class="collapse navbar-collapse majornav">
+    <ul class="navbar-nav ml-auto mr-auto">
+
+	<li class="nav-item">
+<a href="/" class='nav-link' title='GML Home Page'>
+<span class='fa fa-home'></span><span class='d-lg-none'> Home</span>
+</a>
+</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarabout" data-toggle="dropdown">About</a>
+		 <div class="dropdown-menu shadow collapse" aria-labelledby="navbarabout">
+			<a href="/about/aboutgml.html" class="dropdown-item">About GML</a>
+			<a href="/about/deia.html" class="dropdown-item">Diversity, Equity, and Inclusion</a>
+			<a class="dropdown-item" href="/review/">Science Reviews</a>
+			<a class="dropdown-item" href="/safety/">Safety Program</a>
+			<!--			<a href="http://www.esrl.noaa.gov/about/jobs.html" class="dropdown-item">Employment</a> -->
+			<a href="/about/jobs.html" class="dropdown-item">Employment</a>
+			<a href="https://www.boulder.noaa.gov/" class="dropdown-item">Visiting</a>
+			<a href="/about/contacts.html" class="dropdown-item">Contact Us</a>
+			<!--			<a href="https://sites.google.com/a/noaa.gov/oar-esrl-gmd-intranet/"  class="dropdown-item">Intranet</a> -->
+			<a href="https://sites.google.com/noaa.gov/oar-gml-intranet/home"  class="dropdown-item">Intranet</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarpeople" data-toggle="dropdown">People</a>
+		 <div class="dropdown-menu shadow collapse" aria-labelledby="navbarpeople">
+			<a href="/about/orgchart.html" class="dropdown-item">Organization</a>
+			<a href="/about/stafflist.html" class="dropdown-item">Staff</a>
+			<a href="/about/stafflist_group.html" class="dropdown-item">Staff by Division</a>
+			<a href="/about/employees.html" class="dropdown-item">Employee Spotlight</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarresearch" data-toggle="dropdown">Research</a>
+		<div class="dropdown-menu shadow" aria-labelledby="navbarresearch">
+			<a class="dropdown-item" href="/about/research.html">Research Overview</a>
+			<a class="dropdown-item" href="/ccgg/">Carbon Cycle Greenhouse Gases</a>
+			<a class="dropdown-item" href="/hats/">Greenhouse gases and Ozone-depleting Substances</a>
+			<a class="dropdown-item" href="/ozwv/">Ozone and Water Vapor</a>
+			<a class="dropdown-item" href="/grad/">Global Radiation, Aerosols and Clouds</a>
+			<a class="dropdown-item" href="/publications/">Publications</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown mega-dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Observing Networks</a>
+		<div class="dropdown-menu shadow mega-dropdown-menu wide-menuxx">
+<div class="row">
+<div class="col col-lg-3 bro">
+			<span class="menu-header ml-2">Overview</span>
+	<a class="dropdown-item" href="/about/networks.html">Observations Overview</a>
+	<a class="dropdown-item" href="/dv/site/">Measurement Sites</a>
+			<a class="dropdown-item" href="/about/campaigns.html">Field Campaigns</a>	
+</div>
+		<div class="col col-lg-4 bro">
+			<span class="menu-header ml-2">Atmospheric Baseline Observatories</span>
+			<a class="dropdown-item" href="/obop/">Observatory Operations</a>
+			<a class="dropdown-item" href="/obop/brw/">Barrow, Alaska</a>
+			<a class="dropdown-item" href="/obop/mlo/">Mauna Loa, Hawaii</a>
+			<a class="dropdown-item" href="/obop/smo/">American Samoa</a>
+			<a class="dropdown-item" href="/obop/spo/">South Pole</a>
+		</div>
+		<div class="col col-lg-5">
+			<span class="menu-header ml-2">Observing Networks</span>
+			<a class="dropdown-item" href="/ccgg/about.html">Greenhouse Gas Reference Network</a>
+			<a class="dropdown-item" href="/hats/flask/flasks.html">Halocarbons and Trace Gases</a>
+			<a class="dropdown-item" href="/grad/field.html">Surface Radiation</a>
+			<a class="dropdown-item" href="/aero/net/">Federated Aerosol Network</a>
+			<a class="dropdown-item" href="/ozwv/network.php">Ozone</a>
+			<a class="dropdown-item" href="/ozwv/wvap">Water Vapor</a>
+		</div>
+</div>
+</div>
+
+        </li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbardata" data-toggle="dropdown">Data</a>
+		<div class="dropdown-menu shadow" aria-labelledby="navbarpeople">
+			<span class="menu-header ml-2">Data</span>
+			<a class="dropdown-item" href="/aftp/data/">Browse Data Archive</a>
+			<a class="dropdown-item" href="/dv/data/">Search for Data</a>
+			<a class="dropdown-item" href="/dv/data.html">Data by Research Program</a>
+			<a class="dropdown-item" href="/dv/site/">Measurement Sites</a>
+			<a class="dropdown-item" href="/ccgg/obspack/">ObsPack</a>
+			<span class="menu-header ml-2">Tools</span>
+			<a class="dropdown-item" href="/dv/iadv/">Data Viewer</a>
+			<a class="dropdown-item" href="/grad/solcalc/">Solar Calculator</a>
+			<span class="menu-header ml-2">Visualization</span>
+			<a class="dropdown-item" href="/dv/visualize.html">Data Visualization Pages</a>
+			<a class="dropdown-item" href="/dv/spo_oz/">South Pole Ozone Hole</a>
+		</div>
+        </li>
+
+	<li class="nav-item dropdown mega-dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Products</a>
+		
+<div class="dropdown-menu shadow mega-dropdown-menu">
+    <div class="row">
+        <div class="col bro">
+            <span class="menu-header ml-2">Products</span>
+            <a class="dropdown-item" href="/aggi/">Greenhouse Gas Index</a>
+            <a class="dropdown-item" href="/odgi/">Ozone Depletion Index</a>
+            <a class="dropdown-item" href="/ccgg/trends/">Trends in CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O, SF<sub>6</sub></a>
+            <a class="dropdown-item" href="/ccgg/carbontracker/">CarbonTracker</a>
+            <a class="dropdown-item" href="/hats/US_emissiontracker/">US Potent GHG Tracker</a>
+            <a class="dropdown-item" href="/ccgg/obspack/">ObsPack</a>
+            <a class="dropdown-item" href="/grad/mloapt.html">Mauna Loa Apparent Transmission</a>
+            <a class="dropdown-item" href="/grad/snomelt.html">Barrow Snow Melt Dates</a>
+	    <a class="dropdown-item" href="/dv/spo_oz/">South Pole Ozone Hole</a>
+        </div>
+        <div class="col">
+            <span class="menu-header ml-2">Calibration Facilities</span>
+	    <a class="dropdown-item" href="/ccl/">WMO Central Calibration Laboratory</a>
+	    <a class="dropdown-item" href="/grad/calfacil/">Central UV Calibration Facility</a>
+	    <a class="dropdown-item" href="/grad/srf.html">Broadband Solar Calibration Facility</a>
+	    <a class="dropdown-item" href="/ozwv/dobson/">World Dobson Ozone Calibration Centre</a>
+        </div>
+    </div>
+</div>
+
+        </li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Information</a>
+    
+		<div class="dropdown-menu shadow dropdown-menu-right">
+			<a class="dropdown-item" href="/news/">News</a>
+			<a class="dropdown-item" href="/about/seminars.php">Seminars</a>
+			<a class="dropdown-item" href="/education/">Education/Outreach</a>
+			<a class="dropdown-item" href="/interns/">Student Opportunities</a>
+			<a class="dropdown-item" href="/education/faq_cat-1.html">FAQ's</a>
+			<a class="dropdown-item" href="/publications/">Publications</a>
+
+                        <span class="menu-header">Webcams</span>
+                        <a class="dropdown-item" href="/obop/spo/livecamera.html">South Pole Webcam</a>
+                        <a class="dropdown-item" href="/obop/mlo/livecam/livecam.html">Mauna Loa Webcams</a>
+                        <a class="dropdown-item" href="/obop/brw/livecamera.html">Barrow Webcam</a>
+
+			<span class="menu-header">Global Monitoring Annual Conference</span>
+			<a class="dropdown-item" href="/gmac/">
+				<div class="media">
+					<img class="mr-1 mt-1" src="/images/gmac_logo_vsmall.png" alt="GMAC">
+					<div class="media-body">
+						The 52<sup>nd</sup> Conference will be <br>held May 21 - 22, 2024
+					</div>
+				</div>
+			</a>
+		</div>
+	</li>
+
+    </ul>
+    <div id="search" class="d-lg-none">
+        <form action="https://search.usa.gov/search">
+            <div class="form-group mb-1">
+                <input type="hidden" name="affiliate" value="noaa_esrl_gmd">
+                <input type="hidden" name="v:project" value="firstgov" >
+                <div class="input-group mb-1">
+                    <input type="text" name="query" id="query-field2" autocomplete="off" class='form-control input-xs' placeholder="Search GML...">
+                    <div class="input-group-append">
+                        <button type="submit" id='searchbutton' class="btn btn-secondary btn-sm"><i class="fa fa-search"></i><span class='sr-only'>Search</span></button>
+                    </div>
+                    <label for="query-field2" class="sr-only"> Search GML:</label>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+
+
+    <div class="container">
+
+
+
+	
+
+
+</div>  <!-- close container -->
+
+
+<!--
+<div class="mission hidden-xs">
+        Providing the best possible information on atmospheric constituents that
+        drive climate change, stratospheric ozone depletion, and surface radiation.
+</div>
+-->
+
+<style>
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item > img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption > span {
+background-color: rgba(0, 0, 0, 0.2);
+padding: 0.3em;
+border-radius: 4px;
+margin-bottom: 0;
+}
+
+.tagline {
+position: absolute;
+    top: 18%;
+    transform: translateY(-50%);
+    bottom: initial;
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0;
+    left: 20%;
+    right: 20%;
+z-index: 10;
+font-size: 1.3rem;
+color: #fff;
+text-align: center;
+}
+
+.tagheader {
+font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+        .carousel-item > img { height: 250px; }
+        .carousel-item { height: 250px; }
+.carousel-caption {
+left: 5%;
+right: 5%;
+}
+
+.tagheader { font-size:1.5rem;}
+.tagline { font-size:1.1rem;
+top: 25%;
+left: 10%;
+right: 10%;
+}
+}
+
+@media (max-width: 500px) {
+        .carousel-item > img { height: 150px; }
+        .carousel-item { height: 150px; }
+.carousel-caption {
+font-size: 0.5rem;
+}
+.tagheader { font-size:1.2rem;}
+.tagline { font-size:1rem;}
+top: 30%;
+left: 1%;
+right: 1%;
+}
+
+
+</style>
+
+
+<div id="maincarousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#maincarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#maincarousel" data-slide-to="1"></li>
+    <li data-target="#maincarousel" data-slide-to="2"></li>
+    <li data-target="#maincarousel" data-slide-to="3"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+        <img class="" src="main_img/brw_new_old.jpg" alt="">
+        <div class="carousel-caption d-none d-md-block">
+		<span>Panoramic view of the Barrow, Alaska site showing the old and new observatory buildings from the 30m tower, August 2021</span>
+        </div>
+    </div>
+    <div class="carousel-item" data-interval="10000">
+        <img class="" src="main_img/grad_crested_butte.jpg" alt="">
+        <div class="carousel-caption d-none d-md-block">
+		<span>The GRAD team installing Radiation System instruments at Kettle Ponds near the Rocky Mountain Biological Laboratory in Crested Butte, Colorado.</span>
+        </div>
+    </div>
+    <div class="carousel-item" data-interval="10000">
+        <img class="" src="main_img/mlo_rainbow.jpg" alt="">
+        <div class="carousel-caption d-none d-md-block">
+		<span>A traditional Hawaiian rainbow over the Mauna Loa site</span>
+
+        </div>
+    </div>
+    <div class="carousel-item" data-interval="10000">
+        <img class="" src="main_img/table_mountain.jpg" alt="surfrad">
+        <div class="carousel-caption d-none d-md-block">
+		<span>Radiometers at the NOAA Table Mountain Test Facility</span>
+        </div>
+    </div>
+  </div>
+
+
+<div class='tagline'>
+<span class='tagheader'>Global Monitoring Laboratory</span><br>
+Taking the Pulse of the Planet
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<div class="container">
+
+<div class='row my-3'>
+    <div class='col-md-7 col-lg-8'>
+        <h5>The <span class='orange'><b> Global Monitoring Laboratory</b></span> (GML) of the National Oceanic and Atmospheric Administration conducts research that addresses three major challenges: greenhouse gas and carbon cycle feedbacks, changes in clouds, aerosols, and surface radiation, and recovery of stratospheric ozone. </h5>
+        <a href="/about/aboutgml.html" title="Read more about Global Monitoring Laboratory">Read More >></a>
+    </div>
+    <div class='col-md-5 col-lg-4'>
+        
+<style>
+.overlay {
+position: absolute;
+top: 10px;
+left: 20px;
+}
+
+</style>
+
+	<div class="row no-gutters">
+		<div class="col-4 text-center">
+			<a class="btn-gml-icon" href="/bin/news.php">
+			<span class="fa-stack fa-2x mt-2">
+				<i class="fas fa-circle fa-stack-2x"></i>
+				<i class="fas fa-newspaper fa-stack-1x fa-inverse"></i>
+			</span>
+
+			<div class="icon-label">News</div></a>
+		</div>
+		<div class="col-4 text-center">
+			<a class="btn-gml-icon" href="/publications/browse.php">
+			<span class="fa-stack fa-2x mt-2">
+				<i class="fas fa-circle fa-stack-2x"></i>
+				<i class="fas fa-bookmark fa-stack-1x fa-inverse"></i>
+			</span>
+			 <div class="icon-label">Publications</div></a>
+		</div>
+		<div class="col-4 text-center">
+			<a class="btn-gml-icon" href="/about/seminars.php">
+			<span class="fa-stack fa-2x mt-2">
+				<i class="fas fa-circle fa-stack-2x"></i>
+				<i class="fas fa-microphone fa-stack-1x fa-inverse"></i>
+			</span>
+						 <i class="fas fa-exclamation-circle overlay red"></i>    
+			<div class="icon-label">Seminars</div></a>
+		</div>					
+	</div>
+
+    </div>
+</div>
+
+
+
+
+<style>
+
+.news-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.news-item img {
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    object-fit: cover;
+    height: 275px;
+    width: 100%;
+}
+
+.news-item:hover img {
+    transform: scale(1.2);
+}
+
+.headline {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    bottom: initial;
+    border: 0px solid white;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 6px;
+    padding: 0.3rem;
+    margin: 0;
+    left: 5%;
+    right: 5%;
+    z-index: 10;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.headline a {
+    color: #fff;
+}
+
+.newstitle {
+    position: absolute;
+    top: 0%;
+    bottom: initial;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.3rem;
+    margin: 0;
+    left: 0%;
+    z-index: 10;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.font-headline {
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+}
+
+.font-headline:hover {
+color: #08f;
+}
+
+</style>
+
+
+<div class='my-5'>
+        <div class='row'>
+
+<div class='col-md-6 px-md-1'>
+	<a href='https://www.noaa.gov/news-release/noaa-and-united-airlines-partner-to-measure-greenhouse-gases-pollutants'>
+        <div class='news-item'>
+		<img src='https://www.noaa.gov/sites/default/files/styles/landscape_width_1275/public/2024-07/PHOTO-NOGAP-first-loop-Sweney.jpeg?h=459a7da2&itok=aZC8spbq' class='img-fluid' alt='news photo 0'>
+
+                <div class='headline'>
+			NOAA and United Airlines partner to measure greenhouse gases, pollutants with high-tech flight instruments
+                </div>
+
+            <div class='newstitle'>
+                News
+            </div>
+        </div>
+        </a>
+</div>
+<div class='col-md-6 px-md-1'>
+	<a href='https://research.noaa.gov/2024/06/28/understanding-the-basics-of-carbon-dioxide/'>
+        <div class='news-item'>
+		<img src='https://research.noaa.gov/wp-content/uploads/2024/06/NOAA_MaunaLoa_2021_rainbowatMLOsite-1-2048x1536.jpeg' class='img-fluid' alt='news photo 1'>
+
+                <div class='headline'>
+			Understanding the basics of carbon dioxide
+                </div>
+
+            <div class='newstitle'>
+                News
+            </div>
+        </div>
+        </a>
+</div>
+<div class='col-md-6 px-md-1'>
+	<a href='https://www.noaa.gov/news-release/biden-harris-administration-awards-49-million-to-advance-drought-monitoring-and-prediction'>
+        <div class='news-item'>
+		<img src='https://www.noaa.gov/sites/default/files/styles/landscape_width_1275/public/legacy/image/2019/Jun/PHOTO-drought-oroville-sep2014-010616-750x516-landscape.jpg?h=6a103a14&itok=Qg0Fqxwv' class='img-fluid' alt='news photo 2'>
+
+                <div class='headline'>
+			Biden-Harris Administration awards $4.9 million to advance drought monitoring and prediction in U.S. West through the Investing in America agenda
+                </div>
+
+            <div class='newstitle'>
+                News
+            </div>
+        </div>
+        </a>
+</div>
+<div class='col-md-6 px-md-1'>
+	<a href='https://research.noaa.gov/2024/06/13/a-class-of-ozone-depleting-chemicals-is-declining-thanks-to-the-montreal-protocol/'>
+        <div class='news-item'>
+		<img src='https://research.noaa.gov/wp-content/uploads/2024/06/sphinx-jungfraujoch-aletschletscher-sonnenuntergang-1-scaled.jpeg' class='img-fluid' alt='news photo 3'>
+
+                <div class='headline'>
+			A class of ozone-depleting chemicals is declining, thanks to the Montreal Protocol
+                </div>
+
+            <div class='newstitle'>
+                News
+            </div>
+        </div>
+        </a>
+</div></div>
+<a href="/bin/news.php" title="Read all news items about Global Monitoring Laboratory">Read More >></a></div>
+
+
+
+<h4 class='orange mt-4'>Research</h4>
+</div>
+<!-- #include virtual="themes.html"-->
+<div class="readingbox">
+<div class="container">
+
+
+
+    <div class="container mb-4">
+
+<h3 class='text-center mediumgray mb-4'>Themes</h3>
+
+        <div class="row mb-3 mx-md-n5 mx-lg-n1">
+            <div class="col-sm-4 mb-3">
+                    <a href="/about/research.html#carboncycle" class="btn-gml-icon" aria-label="Carbon Cycle Theme">
+<span class="fa-stack fa-2x float-left">
+                                        <i class="far fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-tree fa-stack-1x fa-inversex"></i>
+                                </span>
+                        Greenhouse Gases and Carbon Cycle Feedbacks
+</a>
+            </div>
+        
+            <div class="col-sm-4 mb-3">
+                    <a href="/about/research.html#radiation" class="btn-gml-icon" aria-label="Radiation Theme">
+<span class="fa-stack fa-2x float-left">
+                                        <i class="far fa-circle fa-stack-2x yellowx"></i>
+                                        <i class="fa fa-cloud-sun fa-stack-1x fa-inversex"></i>
+                                </span>
+                    Changes in Surface Radiation, Clouds, and Aerosols
+</a>
+            </div>
+        
+            <div class="col-sm-4 mb-3">
+                    <a href="/about/research.html#ozone" class="btn-gml-icon" aria-label="Ozone Theme">
+<span class="fa-stack fa-2x float-left">
+                                        <i class="far fa-circle fa-stack-2x ltbluex"></i>
+                                        <i class="fa fa-globe-americas fa-stack-1x fa-inversex"></i>
+                                </span>     
+                    Recovery of Stratospheric Ozone
+</a>
+            </div>
+        </div>
+    </div>
+
+<!-- #include virtual="icons2.html"-->
+
+<h3 class='text-center mediumgray'>Programs</h3>
+
+<div class="card-group">
+
+
+<div class="card">
+  <a href="/ccgg/">
+  <img src="/images/power-plant.jpg" class="card-img-top" alt="greenhouse gases">
+  </a>
+  <div class="card-body p-2">
+    <h5 class="card-title"><a href="/ccgg/">Carbon Cycle Greenhouse Gases</a></h5>
+    <p class="card-text">
+	Measurments and modeling of the spatial and temporal distributions of greenhouse gases, providing constraints to our understanding of the global carbon cycle. 
+    </p>
+  </div>
+</div>
+
+
+<div class="card">
+  <a href="/hats/">
+  <img src="/images/hats.jpg" class="card-img-top" alt="hats group">
+</a>
+  <div class="card-body p-2">
+    <h5 class="card-title"><a href="/hats/">Greenhouse gases and Ozone-depleting Substances</a></h5>
+    <p class="card-text">
+	Quantifying the distributions and magnitudes of the sources and sinks for 
+	important ozone-depleting and greenhouse gases.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <a href="/grad/">
+<!--https://commons.wikimedia.org/wiki/Sunset#/media/File:Neapolitan_Sunset.jpg -->
+  <img src="/images/grad.jpg" class="card-img-top" alt="grad group">
+</a>
+  <div class="card-body p-2">
+    <h5 class="card-title"><a href="/grad/">Global Radiation and Aerosols</a></h5>
+    <p class="card-text">
+	Empirical and theoretical research of the Earth's 
+	surface radiation budget and characterizing variability 
+	and trends of climate-forcing properties of aerosol particles.
+    </p>
+  </div>
+</div>
+
+
+<div class="card">
+  <a href="/ozwv/">
+  <img src="/images/ozonehole.png" class="card-img-top" alt="ozone and water vapor">
+</a>
+  <div class="card-body p-2">
+    <h5 class="card-title"><a href="/ozwv/">Ozone and Water Vapor</a></h5>
+    <p class="card-text">
+	Research on the nature and causes of the depletion 
+	of the stratospheric ozone layer and the role of ozone and 
+	water vapor in forcing climate change.
+    </p>
+  </div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+ <div class="container">
+<h4 class="orange mt-4">Atmospheric Baseline Observatories</h4>
+
+
+
+
+<div class="row">
+    <div class="col-xs-6 col-sm-3 text-center">
+	<a href='/obop/brw/'><img src='/images/th_brw.jpg' class="img-fluid text-center rounded" alt='[Barrow]'><h5 class='mt-1'>Barrow, Alaska</h5></a>
+    </div>
+    <div class="col-xs-6 col-sm-3 text-center">
+		<a href='/obop/mlo/'><img src='/images/th_mlo.jpg' class="img-fluid text-center rounded" alt='[Mauna Loa]'><h5 class='mt-1'>Mauna Loa, Hawaii</h5></a>
+    </div>
+    <div class="col-xs-6 col-sm-3 text-center">
+		<a href='/obop/smo/'><img src='/images/th_smo.jpg' class="img-fluid text-center rounded" alt='[American Samoa]'><h5 class='mt-1'>American Samoa</h5></a>
+    </div>
+    <div class="col-xs-6 col-sm-3 text-center">
+		<a href='/obop/spo/'><img src='/images/th_spo.jpg' class="img-fluid text-center rounded" alt='[South Pole]'><h5 class='mt-1'>South Pole, Antarctica</h5></a>
+    </div>
+
+</div>
+
+
+
+<h4 class="orange mt-4">Annual Conference</h4>
+
+<div class='callout my-4'>
+    <div class='row'>
+      <div class='col-2'>
+         <a href='/annualconference/'><img class='img-fluid' src='/images/gmac_logo_nodate.png' alt='Global Monitoring Annual Conference'></a>
+      </div>
+      <div class='col-10'>
+             <h4 class='media-heading'> <a href='/annualconference/'>2024 Global Monitoring Annual Conference</a> </h4>
+             <p>
+The Global Monitoring Laboratory held the 2024 Global Monitoring Annual Conference on May 21-22, 2024.
+             </p>
+             <a href='/annualconference/' class="btn btn-success">
+                 <span class="fa fa-info-circle"></span> Read More...
+             </a>
+
+      </div>
+    </div>
+</div>
+
+
+
+<h4 class="orange mt-4">Explore</h4>
+</div>
+<div class="readingbox">
+    <div class="container">
+
+        <div class="row">
+
+	    <div class="col-sm-2 offset-sm-2 text-center">
+                <a href="ccgg/trends/">
+                <img class="img-fluid img-thumbnail" src="images/trends.png" alt="trends">
+                <h5>Current Trends</h5></a>
+            </div>
+
+	    <div class="col-sm-2 text-center">
+                <a href="grad/solcalc/">
+                <img class="img-fluid img-thumbnail" src="images/th_solcal.png" alt="solar calculator">
+                <h5>Solar Calculator</h5></a>
+            </div>
+
+	    <div class="col-sm-2 text-center">
+                <a href="ccl/index.html">
+                <img class="img-fluid img-thumbnail" src="images/ccl.jpg" alt="ccl">
+                <h5>CCL</h5></a>
+            </div>
+
+            <div class="col-sm-2 text-center">
+                <a href="education/">
+                <img class="img-fluid img-thumbnail" src="/images/th_education.png" alt="Education and Outreach">
+                <h5>Education</h5></a>
+            </div>
+        
+        </div>
+
+    </div>
+</div>
+
+<div class="container d-block d-sm-none mt-2 mb-2">
+
+	<form action="https://search.usa.gov/search" class="form-inline">
+		<input type="hidden" name="affiliate" value="noaa_esrl_gmd">
+		<input type="hidden" name="v:project" value="firstgov" >
+		<label for="esrl-query">Search ESRL:</label><br >
+<!--            <input type="text" name="query" value="" id="query-field" size="18" > -->
+		<input class="form-control" id="esrl-query" type="text" name="query" autocomplete="off" placeholder="Enter search term">
+		<button class="btn btn-primary btn-sm mt-2" type="submit">Search</button>
+	</form>
+
+
+</div>
+
+
+<footer class="footer" role="contentinfo">
+
+
+<nav class="navbar navbar-expand-md navbar-footer" >
+
+  <div class="container">
+    <ul class="navbar-nav">
+
+	<li class="footer-content"><a class="nav-link" href="/about/research.html">Research</a></li>
+	<li class="footer-content"><a class="nav-link" href="/dv/data.html">Data</a></li>
+	<li class="footer-content"><a class="nav-link" href="/obop/">Observatory Operations</a></li>
+	<li class="footer-content"><a class="nav-link" href="/education/">Education</a></li>
+	<li class="footer-content"><a class="nav-link" href="/news/">News</a></li>
+	<li class="footer-content"><a class="nav-link" href="/publications/browse.php">Publications</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+  <div class="footer-secondary_section">
+<div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <img class="footer-logo" src="/webdata/logos/noaa-emblem.png" alt="NOAA logo">
+        <p class="footer-logo-heading" style="margin-top: 0;">
+           <a href="https://www.esrl.noaa.gov/">Earth System Research Laboratories</a><br>
+           <a href="/">Global Monitoring Laboratory</a>
+        </p>
+
+        <p><a href="https://www.noaa.gov/protecting-your-privacy">Privacy Policy</a> &nbsp;| &nbsp;
+           <a href="https://www.noaa.gov/accessibility">Accessibility</a> &nbsp;| &nbsp;
+           <a href="/about/disclaimer.html">Disclaimer</a> &nbsp;| &nbsp;
+           <a href="https://www.usa.gov">Usa.gov</a>
+        </p>
+      </div>
+      <div class="col-md-4 footer-right-section">
+<p>
+                <a href="https://www.facebook.com/NOAAESRL" title="ESRL Facebook" aria-label="ESRL Facebook">&nbsp;<i class="fab fa-facebook-f fa-2x social"></i></a>
+                <a href="https://twitter.com/NOAA_ESRL" title="ESRL Twitter" aria-label="ESRL Twitter"> <i class="fab fa-2x fa-twitter social"></i></a>
+                <a href="https://www.youtube.com/user/NOAAESRL" title="ESRL Youtube Channel" aria-label="ESRL Youtube"> <i class="fab fa-2x fa-youtube social"></i></a>
+                <a href="https://www.flickr.com/photos/noaa_esrl" title="ESRL Flickr" aria-label="ESRL Flickr"> <i class="fab fa-2x fa-flickr social"></i></a>
+
+</p>
+          <p><a href="/sitemap/">Site Contents</a></p>
+          <p><a href="/about/contacts.html">Contact Us</a> &nbsp;| &nbsp;<a href="mailto:webmaster.gml@noaa.gov">Webmaster</a></p>
+
+      </div>
+    </div>
+        <ol class="breadcrumb hidden-xs" id="minor_footer">
+                <li class="breadcrumb-item" ><a href="https://www.commerce.gov/">U.S. Department of Commerce</a></li>
+                <li class="breadcrumb-item"><a href="https://www.noaa.gov/">National Oceanic &amp; Atmospheric Administration</a></li>
+                <li class="breadcrumb-item"><a href="https://research.noaa.gov/">NOAA Research</a></li>
+        </ol>
+
+  </div>
+  </div>
+
+</footer>
+
+</body>
+
+
+</html>
+
