@@ -1,0 +1,12 @@
+Start Time 20211113 13:00:33
+Midpoint   20211113 13:02:02
+End Time  20211113 13:03:45
+
+nov13_chunk8_low_v2_plusdem
+- 7-band TIF image stored as Float
+- col/row - 12155/14219
+- Band/wavelength - Blu/475, Grn/560, Red/668, RE/717, NIR/840
+- optical band pixels = reflectance
+- band 6 = temperature in C
+- band 7 = elevation in meters
+
